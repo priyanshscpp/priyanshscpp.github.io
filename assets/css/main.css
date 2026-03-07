@@ -1,13 +1,21 @@
 /* Color Palette & Global Resets */
+/*color pallette checked once*/
 :root {
-    --bg-dark: #0f0f0f;       /* Deep dark gray for body keeping the black ubuntu terminal vibe */
-    --bg-nav: #2c001e;        /* Canonical Aubergine for navbar */
-    --bg-surface: #1e1e1e;    /* Surface elements */
-    --text-primary: #f2f2f2;  /* High contrast primary text */
-    --text-secondary: #c0c0c0;/* Muted secondary text */
-    --accent: #E95420;        /* Official Ubuntu Orange */
-    --border: #3d3c38;        /* Ubuntu dark border */
-    
+    --bg-dark: #0f0f0f;
+    /* Deep dark gray for body keeping the black ubuntu terminal vibe */
+    --bg-nav: #2c001e;
+    /* Canonical Aubergine for navbar */
+    --bg-surface: #1e1e1e;
+    /* Surface elements */
+    --text-primary: #f2f2f2;
+    /* High contrast primary text */
+    --text-secondary: #c0c0c0;
+    /* Muted secondary text */
+    --accent: #E95420;
+    /* Official Ubuntu Orange */
+    --border: #3d3c38;
+    /* Ubuntu dark border */
+
     --font-main: 'Ubuntu', -apple-system, sans-serif;
     --font-mono: 'Ubuntu Mono', monospace;
     --transition: all 0.2s ease-in-out;
@@ -36,18 +44,26 @@ body {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-dark);
 }
+
 ::-webkit-scrollbar-thumb {
     background: #444;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #666;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: 1.3;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -66,7 +82,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -122,7 +138,8 @@ p {
 
 .content-area {
     flex-grow: 1;
-    min-width: 0; /* Prevent overflow */
+    min-width: 0;
+    /* Prevent overflow */
 }
 
 /*=============================================================================
@@ -207,8 +224,15 @@ p {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section-title {
@@ -378,24 +402,31 @@ p {
 /*=============================================================================
   TIMELINE, PROJECTS, SUBJECTS
 =============================================================================*/
-.timeline-item, .project-item, .course-item {
+.timeline-item,
+.project-item,
+.course-item {
     margin-bottom: 2.5rem;
 }
 
-.timeline-title, .project-title {
+.timeline-title,
+.project-title {
     font-size: 1.3rem;
     color: var(--accent);
     margin-bottom: 0.3rem;
     margin-top: 0;
 }
 
-.timeline-meta, .course-meta, .project-tech {
+.timeline-meta,
+.course-meta,
+.project-tech {
     font-size: 0.9rem;
     color: #8b949e;
     margin-bottom: 0.8rem;
 }
 
-.timeline-desc, .project-desc, .course-desc {
+.timeline-desc,
+.project-desc,
+.course-desc {
     color: var(--text-secondary);
     font-size: 1rem;
     line-height: 1.6;
@@ -576,7 +607,8 @@ p {
 }
 
 .project-header .project-title {
-    margin-bottom: 0; /* Override */
+    margin-bottom: 0;
+    /* Override */
 }
 
 .project-badge {
@@ -609,117 +641,259 @@ p {
     color: var(--text-primary);
 }
 
-.ml-3 { margin-left: 1rem; }
-.mt-2 { margin-top: 0.5rem; }
+.ml-3 {
+    margin-left: 1rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
 
 /*=============================================================================
   OS LOADING SCREEN
 =============================================================================*/
 .preloader {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background-color: #000; z-index: 9999;
-    display: flex; justify-content: center; align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
-.preloader.hidden { opacity: 0; visibility: hidden; }
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
 
 .os-boot-screen {
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    width: 100%; height: 100%; transition: opacity 0.5s ease;
-    background-color: #000000; /* Pure Black Boot */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    background-color: #000000;
+    /* Pure Black Boot */
 }
-.os-boot-screen.hidden-os { opacity: 0; }
+
+.os-boot-screen.hidden-os {
+    opacity: 0;
+}
 
 .ubuntu-brand {
-    display: flex; align-items: center; gap: 15px; margin-bottom: 3rem;
-    font-size: 4.5rem; color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+    font-size: 4.5rem;
+    color: #fff;
 }
-.ubuntu-text { font-family: 'Ubuntu', sans-serif; font-weight: 500; font-size: 3.5rem; }
 
-.ubuntu-loader { display: flex; gap: 10px; }
+.ubuntu-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+.ubuntu-loader {
+    display: flex;
+    gap: 10px;
+}
+
 .ubuntu-loader .dot {
-    width: 12px; height: 12px; border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
     animation: ubuntuLoad 1.5s infinite ease-in-out;
 }
-.ubuntu-loader .dot:nth-child(1) { animation-delay: 0s; }
-.ubuntu-loader .dot:nth-child(2) { animation-delay: 0.15s; }
-.ubuntu-loader .dot:nth-child(3) { animation-delay: 0.3s; }
-.ubuntu-loader .dot:nth-child(4) { animation-delay: 0.45s; }
-.ubuntu-loader .dot:nth-child(5) { animation-delay: 0.6s; }
+
+.ubuntu-loader .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.ubuntu-loader .dot:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.ubuntu-loader .dot:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.ubuntu-loader .dot:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.ubuntu-loader .dot:nth-child(5) {
+    animation-delay: 0.6s;
+}
 
 @keyframes ubuntuLoad {
-    0%, 100% { background-color: rgba(255, 255, 255, 0.2); transform: scale(1); }
-    50% { background-color: #E95420; transform: scale(1.2); }
+
+    0%,
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1);
+    }
+
+    50% {
+        background-color: #E95420;
+        transform: scale(1.2);
+    }
 }
 
 /* Terminal Phase */
 .terminal-loader {
-    width: 90%; max-width: 700px;
-    background: #050505; /* Hacker Black Terminal */
-    border: 1px solid #333; 
-    overflow: hidden; font-family: 'Ubuntu', var(--font-mono);
+    width: 90%;
+    max-width: 700px;
+    background: #050505;
+    /* Hacker Black Terminal */
+    border: 1px solid #333;
+    overflow: hidden;
+    font-family: 'Ubuntu', var(--font-mono);
     transition: opacity 0.5s ease;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
     border-radius: 8px;
 }
-.terminal-loader.hidden { display: none; opacity: 0; }
+
+.terminal-loader.hidden {
+    display: none;
+    opacity: 0;
+}
+
 .terminal-header {
-    background: #3d3c38; padding: 10px 15px; display: flex; align-items: center;
+    background: #3d3c38;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid #2d2c29;
 }
-.terminal-header .btn { width: 14px; height: 14px; border-radius: 50%; margin-right: 8px; }
-.btn.red { background: #E95420; } /* Ubuntu Orange Close */
-.btn.yellow { background: #eab443; }
-.btn.green { background: #14a044; }
 
-.terminal-title { 
-    color: #e6e6e6; font-family: 'Ubuntu', sans-serif; font-size: 0.9rem; font-weight: 500;
-    margin-left: auto; margin-right: auto; transform: translateX(-20px); 
+.terminal-header .btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.btn.red {
+    background: #E95420;
+}
+
+/* Ubuntu Orange Close */
+.btn.yellow {
+    background: #eab443;
+}
+
+.btn.green {
+    background: #14a044;
+}
+
+.terminal-title {
+    color: #e6e6e6;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-20px);
 }
 
 .terminal-body {
-    padding: 20px; height: 350px; background-color: #050505;
-    color: #ffffff; font-size: 0.95rem; overflow-y: auto;
-    display: flex; flex-direction: column; gap: 8px;
+    padding: 20px;
+    height: 350px;
+    background-color: #050505;
+    color: #ffffff;
+    font-size: 0.95rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     text-align: left;
 }
-.terminal-body::-webkit-scrollbar { width: 8px; }
-.terminal-body::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
 
-.boot-line { opacity: 0; animation: fadeIn 0.1s forwards; }
-.prompt { color: #8ae234; margin-right: 8px; font-weight: bold; } /* GNOME Terminal Green */
-.boot-cursor {
-    display: inline-block; width: 8px; height: 16px;
-    background-color: #ffffff;
-    animation: blink 1s step-end infinite; vertical-align: middle;
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
 }
 
-@keyframes fadeIn { to { opacity: 1; } }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.boot-line {
+    opacity: 0;
+    animation: fadeIn 0.1s forwards;
+}
+
+.prompt {
+    color: #8ae234;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* GNOME Terminal Green */
+.boot-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #ffffff;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
 
 /* Responsive Data */
 @media (max-width: 900px) {
-    .main-wrapper { 
-        flex-direction: column; 
+    .main-wrapper {
+        flex-direction: column;
         gap: 2rem;
     }
-    .sidebar { 
-        width: 100%; 
+
+    .sidebar {
+        width: 100%;
         border-bottom: 1px solid var(--border);
         padding-bottom: 2rem;
     }
-    .profile-img-container { 
-        width: 150px; 
-        height: 150px; 
+
+    .profile-img-container {
+        width: 150px;
+        height: 150px;
     }
-    .nav-links { 
-        flex-wrap: wrap; 
+
+    .nav-links {
+        flex-wrap: wrap;
         gap: 1rem;
     }
+
     .hobby-card {
         flex-direction: column;
     }
+
     .hobby-img {
         width: 100%;
         height: auto;
